@@ -16,6 +16,10 @@ from django.utils import timezone
 
 # Precisa criar classe para category, se precisar excluir vc tem mais controle sobre isso
 class Category(models.Model):
+    class Meta:
+        verbose_name = 'Category'
+        verbose_name_plural = 'Categories'
+
     name = models.CharField(max_length=50)
 
     def __str__(self) -> str:
